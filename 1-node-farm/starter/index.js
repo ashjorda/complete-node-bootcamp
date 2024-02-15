@@ -40,6 +40,7 @@ const server = http.createServer((req, res) => {
     } else if (pathName === '/product') {
         res.end('This is the PRODUCT');
     } else {
+        res.writeHead(404);
         res.end('Page not found!');
     }
 });
